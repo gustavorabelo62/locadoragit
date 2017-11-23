@@ -1,6 +1,6 @@
 
 package locadoragit;
-import java.util.ArrayList;
+
 import java.util.Date;
 import java.util.Scanner;
 
@@ -8,102 +8,80 @@ import java.util.Scanner;
 public class Socio {
     Scanner entrada = new Scanner(System.in);
     
-    //lista de atributos pedido pela questao
-    // a IDE pediu para torna os atributos como final qual a importancia disso?
-    //nao consigo muda de String para int ou long. pq?
-    private ArrayList<String> nome = new ArrayList<>();
-    private ArrayList<String> endereco = new ArrayList<>();
-    private ArrayList<String> cpf= new ArrayList<>();
-    private ArrayList<String> telefone = new ArrayList<>();
-    private ArrayList<String> rg = new ArrayList<>();
-    //não achei nada sobre array de datas 
-    int n;
-    Date[] data = new Date[n];
-    /*private String endereco;
-    *private String cpf;
-    *int telefone;
-    *int RG;
-    */
-    
-    //contrutor para iniciar 
+        private String nome;
+        private String endereço;
+        private String cpf;   //usei estring em cpf e rg por causa do equals pelo que vi so pode ser usado em strings 
+        private int telefone;
+        private String RG;
+        Date data ;
 
-    public Socio(String nome,String endereco, String cpf, String telefone, String rg) {
+    public Socio(String nome, String endereço, String cpf, int telefone, String RG, Date data) {
+        this.nome = nome;
+        this.endereço = endereço;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.RG = RG;
+        this.data = data;
+    }
         
-        this.nome.add(nome);
-        this.endereco.add(endereco);
-        this.cpf.add(cpf);
-        this.telefone.add(telefone);
-        this.rg.add(rg);
         
+
+    public Scanner getEntrada() {
+        return entrada;
     }
 
     public void setEntrada(Scanner entrada) {
         this.entrada = entrada;
     }
 
-    public void setNome(ArrayList<String> nome) {
-        this.nome = nome;
-    }
-
-    public void setEndereco(ArrayList<String> endereco) {
-        this.endereco = endereco;
-    }
-
-    public void setCpf(ArrayList<String> cpf) {
-        this.cpf = cpf;
-    }
-
-    public void setTelefone(ArrayList<String> telefone) {
-        this.telefone = telefone;
-    }
-
-    public void setRg(ArrayList<String> rg) {
-        this.rg = rg;
-    }
-
-    public void setN(int n) {
-        this.n = n;
-    }
-
-    public void setData(Date[] data) {
-        this.data = data;
-    }
-
-    public Scanner getEntrada() {
-        return entrada;
-    }
-
-    public ArrayList<String> getNome() {
+    public String getNome() {
         return nome;
     }
 
-    public ArrayList<String> getEndereco() {
-        return endereco;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public ArrayList<String> getCpf() {
+    public String getEndereço() {
+        return endereço;
+    }
+
+    public void setEndereço(String endereço) {
+        this.endereço = endereço;
+    }
+
+    public String getCpf() {
         return cpf;
     }
 
-    public ArrayList<String> getTelefone() {
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public int getTelefone() {
         return telefone;
     }
 
-    public ArrayList<String> getRg() {
-        return rg;
+    public void setTelefone(int telefone) {
+        this.telefone = telefone;
     }
 
-    public int getN() {
-        return n;
+    public String getRG() {
+        return RG;
     }
 
-    public Date[] getData() {
+    public void setRG(String RG) {
+        this.RG = RG;
+    }
+
+    public Date getData() {
         return data;
     }
 
-
-    
-    
-    
+    public void setData(Date data) {
+        this.data = data;
+    }
+        
+        
     
 }
