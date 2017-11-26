@@ -10,7 +10,7 @@ public class Copia extends Filme {
     
     boolean liberaLocacao(){
         if(numecop <= 0){
-             System.out.println("copias insuficiente");
+             System.out.println("filme inexistente");
             return true;
             
         }else{

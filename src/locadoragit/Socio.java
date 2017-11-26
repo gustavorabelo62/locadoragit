@@ -15,14 +15,15 @@ public class Socio {
         private String RG;
         Date data ;
 
-    public Socio(String nome, String endereço, String cpf, int telefone, String RG, Date data) {
+    public Socio(String nome, String endereço, String cpf, int telefone, String RG) {
         this.nome = nome;
         this.endereço = endereço;
         this.cpf = cpf;
         this.telefone = telefone;
         this.RG = RG;
-        this.data = data;
+        //this.data = data;
     }
+
         
         
 
