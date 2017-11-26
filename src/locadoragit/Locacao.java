@@ -1,20 +1,25 @@
 
 package locadoragit;
 
+import java.util.ArrayList;
+
 
 public class Locacao {
     
-     int NunCopias;
-     
-     
-    public boolean alugar(int NumCopias ){
-         int alugados = 0;
-        if ( alugados > this.NunCopias ) {
-            System.out.println("todos alugados !");
-            return false;
-        } else {
-            System.out.println("divirta-se!");
-            return true;
-        }
-     }
+    ArrayList<Filme> CatalagoDeFilmes = new ArrayList<>();
+    ArrayList<Socio> ListaDeSocio = new ArrayList<>();
+    
+    
+    
+    public Filme buscarFilme(String titulo ) {
+		for (Filme filme : CatalagoDeFilmes ) {
+			if (filme.getTitulo().equals(titulo) ) {
+				System.out.println("titulo encotrado...");
+				System.out.println(titulo);
+				return filme;
+			}
+		}
+		System.out.println("Cfilme  encotrado...");
+		return null;
+	}
 }
